@@ -1,0 +1,43 @@
+<form #userRegistration="ngForm">
+  <div>
+    <fieldset>
+    <legend>User Details</legend>
+    <div>
+        <label >First Name</label> 
+        <input type="text" name="txtFirstName" [(ngModel)]='user.FirstName' required />
+    </div>
+    <div>
+        <label >Last Name</label> 
+        <input type="text" name="txtLastName" [(ngModel)]='user.LastName'/>
+    </div>
+    <div>
+        <label >Email Id</label> 
+        <input type="text" name="txtEmailId" [(ngModel)]='user.EmailId' required/>
+    </div>
+    <div>
+        <label >Contract Number</label> 
+        <input type="text" name="txtContractNumber" [(ngModel)]='user.ContractNumber' required/>
+    </div>
+  </fieldset>
+   <fieldset>
+    <legend>Login Details</legend>
+    <div>
+        <label >User Id</label> 
+        <input type="text" name="txtUserId" [(ngModel)]='user.UserId' required/>
+    </div>
+    <div>
+        <label >Password</label> 
+        <input type="password" name="txtPassword" [(ngModel)]='user.Password' required/>
+    </div>
+    <div>
+            <label >Confirm Password</label> 
+            <input type="password" name="txtConfirmPassword" [(ngModel)]='user.ConfirmPassword' required/>
+     </div>
+</fieldset>
+<div>
+    <input type="button" value="Submit" (click)='onSubmit()' />
+    <input type="button" value="Clear" (click)='onClear()' />
+    <span>{{status}}</span>
+</div>
+  </div>
+</form>
